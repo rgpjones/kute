@@ -29,6 +29,7 @@ class InitialiseCommand extends Command
         $this->setDescription('Install RC files from templates');
     }
 
+    /** @SuppressWarnings(PHPMD).Superglobals */
     public function execute(InputInterface $input, OutputInterface $output): int
     {
         /** @var QuestionHelper $questionHelper */

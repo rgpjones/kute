@@ -59,10 +59,7 @@ class TunnelNannyCommand extends Command
         $output->writeln(sprintf('[%s] %s', date('Y-m-d H:i:s'), $message));
     }
 
-    /**
-     * @param string $sshCommand
-     * @return array
-     */
+    /** @SuppressWarnings(PHPMD).ExitExpression */
     private function connect(string $sshCommand): array
     {
         $result = [];

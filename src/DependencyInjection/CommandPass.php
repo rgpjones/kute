@@ -12,21 +12,14 @@ use Symfony\Component\DependencyInjection\TypedReference;
 
 class CommandPass implements CompilerPassInterface
 {
-    private $applicationServiceId;
-    private $commandLoaderServiceId;
-    private $commandTag;
-
     public function __construct(
-        $applicationServiceId = 'console',
-        $commandLoaderServiceId = 'console.command_loader',
-        $commandTag = 'console.command'
+        private readonly string $applicationServiceId = 'console',
+        private readonly string $commandLoaderServiceId = 'console.command_loader',
+        private readonly string $commandTag = 'console.command'
     ) {
-        $this->applicationServiceId = $applicationServiceId;
-        $this->commandLoaderServiceId = $commandLoaderServiceId;
-        $this->commandTag = $commandTag;
     }
 
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         $commandServices = $container->findTaggedServiceIds($this->commandTag, true);
         $lazyCommandMap = array();

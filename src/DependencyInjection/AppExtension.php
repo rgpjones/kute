@@ -7,12 +7,12 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 
 class AppExtension extends Extension implements PrependExtensionInterface
 {
-    public function prepend(ContainerBuilder $container)
+    public function prepend(ContainerBuilder $container): void
     {
         (new CommandPass('app.console', 'app.console.command_loader', 'app.console.command'))->process($container);
     }
 
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
     }
 }
