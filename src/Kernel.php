@@ -32,6 +32,10 @@ class Kernel extends BaseKernel
     public function getVarDir(): string
     {
         $projectVarDir = $this->getProjectDir().'/var';
+        if (!file_exists($projectVarDir)) {
+            mkdir($projectVarDir, 0755);
+        }
+
         return (file_exists($projectVarDir) && is_writable($projectVarDir))
             ? $projectVarDir
             : \sys_get_temp_dir().'/kute/var/'.$this->environment;
