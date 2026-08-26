@@ -29,7 +29,8 @@ class VideoConvertCommand extends Command
     {
         $directory = $input->getArgument('directory');
         if (!file_exists($directory)) {
-            die('Directory does not exist');
+            $output->writeln('<error>Directory does not exist</error>');
+            return self::FAILURE;
         }
 
         $convertFiles = [];

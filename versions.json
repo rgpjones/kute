@@ -42,5 +42,13 @@
     "4.2.0": {
         "version": "4.2.0",
         "SHA256": "1a33dc2e0742ca1cbcb84312c74f8fdf3bac50946ac80e2f88471b0fa6dfa717"
+    },
+    "4.3.0": {
+        "version": "4.3.0",
+        "SHA256": "38fe188eca4d3c07b75468de495d209636c23cba2244a648b63dec8bb8041e39"
+    },
+    "5.0.0": {
+        "version": "5.0.0",
+        "SHA256": "496667db91d7d54809ff27dff4ae6c8bb066d87a62d1b07488ca469e903ebe51"
     }
 }

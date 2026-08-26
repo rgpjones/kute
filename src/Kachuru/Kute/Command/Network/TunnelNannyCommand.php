@@ -7,7 +7,6 @@ namespace Kachuru\Kute\Command\Network;
 use App\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Output\Output;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class TunnelNannyCommand extends Command
@@ -59,10 +58,7 @@ class TunnelNannyCommand extends Command
         $output->writeln(sprintf('[%s] %s', date('Y-m-d H:i:s'), $message));
     }
 
-    /**
-     * @param string $sshCommand
-     * @return array
-     */
+    /** @SuppressWarnings(PHPMD).ExitExpression */
     private function connect(string $sshCommand): array
     {
         $result = [];

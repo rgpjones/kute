@@ -26,7 +26,7 @@ class Kernel extends BaseKernel
 
     public function getProjectDir(): string
     {
-        return \dirname(__DIR__);
+        return \dirname(__DIR__, 2);
     }
 
     public function getVarDir(): string
