@@ -40,7 +40,7 @@
     "autoload": {
         "psr-4": {
             "Kachuru\\": "src/Kachuru/",
-            "App\\": "src/"
+            "App\\": "src/App"
         }
     },
     "autoload-dev": {
